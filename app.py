@@ -34,7 +34,7 @@ def preprocess(img):
 def index():
 	return(render_template("index.html"))
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["GET","POST"])
 def predict():
 	print('HERE')
 	message = request.get_json(force=True)
